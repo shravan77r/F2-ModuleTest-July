@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #2E335A;
+    color: #FFFFFF;
+    font-family: Inter;
+    font-size: 16px;
+}
+
+.header {
+    text-align: center;
+    margin: 40px;
+}
+
+.header h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.40799999237060547px;
+}
+
+.add-container {
+    margin: auto;
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.search-container {
+    width: 90%;
+    background: rgba(28, 27, 51, 0.26);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px #00000040 inset;
+    display: flex;
+    align-items: center;
+}
+
+.search-container>input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.search-container span {
+    align-self: stretch;
+    padding: 12px 10px;
+    background-color: transparent;
+    font-weight: 100 !important;
+}
+
+.search-container>input:focus {
+    outline: none;
+}
+
+.add-container #btnaddcity {
+    background: #4A397FB2;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+#cards-container {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    width: 280px;
+    background-image: url('Rectangle.png');
+    background-size: cover;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    gap: 20px;
+    border-radius: 8px;
+}
+
+.card * {
+    background-color: transparent;
+}
+
+.left-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left-card #tempsup{
+    font-size: 40px;
+}
+
+#temperature {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 41px;
+    text-align: left;
+}
+
+.min-max-temp {
+    display: flex;
+}
+
+.min-max-temp span {
+    font-family: SF Pro Text;
+    margin-right: 10px;
+    color: rgba(235, 235, 245, 0.835);
+    font-size: 13px;
+}
+
+#city-name {
+    font-family: SF Pro Text;
+    font-size: 15px;
+    margin-top: 10px;
+    color: rgba(235, 235, 245, 0.6);
+}
+
+.card .right-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .right-card img {
+    width: 120px;
+}
+
+#weather {
+    text-align: left;
+    font-size: 13px;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+    #cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    #cards-container {
+        grid-template-columns: 1fr;
+    }
+    .header h2 {
+        font-size: 20px;
+    }
+    .add-container {
+        flex-direction: column; 
+        width: 90vw; 
+    }
+    .search-container {
+        max-width: 100%;
+    }
+    .add-container #btnaddcity {
+        max-width: 90%;
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}
